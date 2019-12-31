@@ -6,22 +6,35 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5; /* TODO: why doesn't this work? */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-a:link {    /* Unvisited links */
-    color: black; 
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 12px;
+}
+
+li a:link, li a:visited { 
+    color: #444; 
     text-decoration: none; 
 }        
 
-a:visited { /* Visited links */
-    color: black; 
-    text-decoration: none; 
-}     
-a:hover {   /* Hovered links */
+li a:hover, li a:active { 
     text-decoration: underline; 
 }
 
-a:active {  /* Active links */
-    color: red; 
-    text-decoration: underline; 
+li a:active { 
+    color: red;
 } 
+
+#footer-right {
+    float: right;
+}
